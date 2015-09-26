@@ -30,7 +30,7 @@ case "$1" in
         		eval $(apt-config shell TRUSTEDFILE Apt::GPGV::TrustedKeyring)
         		eval $(apt-config shell TRUSTEDFILE Dir::Etc::Trusted/f)
         		if [ -e "$TRUSTEDFILE" ]; then
-        			for KEY in 2EF35D13; do
+        			for KEY in 4F9F57FA; do
         				apt-key --keyring "$TRUSTEDFILE" del $KEY > /dev/null 2>&1 || :
         			done
         		fi
